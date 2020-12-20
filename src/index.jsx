@@ -3,15 +3,18 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import { ChakraProvider } from "@chakra-ui/react";
 import { BrowserRouter } from "react-router-dom";
-import * as serviceWorker from './serviceWorker';
+import * as serviceWorker from '../src/serviceWorker';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ChakraProvider>
       <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </ChakraProvider>
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </BrowserRouter> 
   </React.StrictMode>,
   document.getElementById("root")
 );

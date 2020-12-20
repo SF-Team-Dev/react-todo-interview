@@ -1,11 +1,18 @@
 import React from "react";
-import { Heading, Center } from "@chakra-ui/react";
+import NavBar from "./components/NavB";
+import TaskInput from "./components/TaskInput";
+import TaskList from "./components/TaskList";
+
+
+// Dispatch des components
 
 function App() {
   return (
-    <Center bg="#203e7a" h="100vh" color="white">
-      <Heading size="xl">Let's code</Heading>
-    </Center>
+    <div className='m-5'>
+      <NavBar></NavBar>
+      <TaskInput></TaskInput>
+      <TaskList></TaskList>
+    </div>
   );
 }
 
