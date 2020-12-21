@@ -1,11 +1,29 @@
 import React from "react";
-import { Heading, Center } from "@chakra-ui/react";
+import TaskInput from "./components/TaskInput";
+import TaskList from "./components/TaskList";
+import Header from "./components/Header";
+import "bootstrap/dist/css/bootstrap.css";
+import { Form } from "react-bootstrap";
+
+// Should have been the TaskManager maybe
 
 function App() {
   return (
-    <Center bg="#203e7a" h="100vh" color="white">
-      <Heading size="xl">Let's code</Heading>
-    </Center>
+    <div className="App m-5">
+      <Form>
+      <Header />
+      <div>
+        <div>
+          <TaskInput />
+        </div>
+        <div>
+          <div>
+            <TaskList />
+          </div>
+        </div>
+      </div>
+      </Form>
+    </div>
   );
 }
 
